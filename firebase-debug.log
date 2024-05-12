@@ -1,0 +1,95 @@
+[debug] [2024-05-12T18:37:29.335Z] ----------------------------------------------------------------------
+[debug] [2024-05-12T18:37:29.341Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\tanzeel khan\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2024-05-12T18:37:29.342Z] CLI Version:   13.8.3
+[debug] [2024-05-12T18:37:29.342Z] Platform:      win32
+[debug] [2024-05-12T18:37:29.343Z] Node Version:  v20.13.1
+[debug] [2024-05-12T18:37:29.343Z] Time:          Sun May 12 2024 23:37:29 GMT+0500 (Pakistan Standard Time)
+[debug] [2024-05-12T18:37:29.343Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-05-12T18:37:29.516Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-05-12T18:37:29.517Z] > authorizing via signed-in user (tanzeelkhandec21@gmail.com)
+[debug] [2024-05-12T18:37:29.517Z] [iam] checking project react-hello-world-f5666 for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2024-05-12T18:37:29.522Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/react-hello-world-f5666:testIamPermissions [none]
+[debug] [2024-05-12T18:37:29.522Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/react-hello-world-f5666:testIamPermissions x-goog-quota-user=projects/react-hello-world-f5666
+[debug] [2024-05-12T18:37:29.523Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/react-hello-world-f5666:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2024-05-12T18:37:41.245Z] *** [apiv2] error from fetch(https://cloudresourcemanager.googleapis.com/v1/projects/react-hello-world-f5666:testIamPermissions, {"headers":{},"method":"POST","body":"{\"permissions\":[\"firebase.projects.get\",\"firebasehosting.sites.update\"]}"}): FetchError: request to https://cloudresourcemanager.googleapis.com/v1/projects/react-hello-world-f5666:testIamPermissions failed, reason: getaddrinfo ENOTFOUND cloudresourcemanager.googleapis.com
+[debug] [2024-05-12T18:37:41.246Z] [iam] error while checking permissions, command may fail: FirebaseError: Failed to make request to https://cloudresourcemanager.googleapis.com/v1/projects/react-hello-world-f5666:testIamPermissions
+[debug] [2024-05-12T18:37:41.252Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/react-hello-world-f5666 [none]
+[debug] [2024-05-12T18:37:57.126Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/react-hello-world-f5666 200
+[debug] [2024-05-12T18:37:57.127Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/react-hello-world-f5666 {"projectId":"react-hello-world-f5666","projectNumber":"242177575243","displayName":"react-hello-world","name":"projects/react-hello-world-f5666","resources":{"hostingSite":"react-hello-world-f5666"},"state":"ACTIVE","etag":"1_d0b8389a-3a7d-4131-b790-1fa106f63de7"}
+[info] 
+[info] === Deploying to 'react-hello-world-f5666'...
+[info] 
+[info] i  deploying hosting 
+[debug] [2024-05-12T18:37:57.157Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/react-hello-world-f5666/versions [none]
+[debug] [2024-05-12T18:37:57.158Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/react-hello-world-f5666/versions {"status":"CREATED","labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2024-05-12T18:38:07.141Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/react-hello-world-f5666/versions 200
+[debug] [2024-05-12T18:38:07.142Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/react-hello-world-f5666/versions {"name":"projects/242177575243/sites/react-hello-world-f5666/versions/2d30029b299d0626","status":"CREATED","config":{},"labels":{"deployment-tool":"cli-firebase"}}
+[info] i  hosting[react-hello-world-f5666]: beginning deploy... 
+[info] i  hosting[react-hello-world-f5666]: found 2 files in public 
+[debug] [2024-05-12T18:38:07.173Z] [hosting] uploading with 200 concurrency
+[debug] [2024-05-12T18:38:07.176Z] [hosting] hash cache [cHVibGlj] not populated
+[debug] [2024-05-12T18:38:07.233Z] [hosting] hash cache [cHVibGlj] stored for 2 files
+[debug] [2024-05-12T18:38:07.236Z] [hosting][hash queue][FINAL] {"max":42,"min":36,"avg":39,"active":0,"complete":2,"success":2,"errored":0,"retried":0,"total":2,"elapsed":56}
+[debug] [2024-05-12T18:38:07.237Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/242177575243/sites/react-hello-world-f5666/versions/2d30029b299d0626:populateFiles [none]
+[debug] [2024-05-12T18:38:07.237Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/242177575243/sites/react-hello-world-f5666/versions/2d30029b299d0626:populateFiles {"files":{"/index.html":"d891b42aa46defd24e11c05cb676e601e5810fbed9dab4d93301445ace9fce65","/vite.svg":"699a02e0e68a579f687d364bbbe7633161244f35af068220aee37b1b33dfb3c7"}}
+[debug] [2024-05-12T18:38:08.226Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/242177575243/sites/react-hello-world-f5666/versions/2d30029b299d0626:populateFiles 200
+[debug] [2024-05-12T18:38:08.226Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/242177575243/sites/react-hello-world-f5666/versions/2d30029b299d0626:populateFiles {"uploadRequiredHashes":["d891b42aa46defd24e11c05cb676e601e5810fbed9dab4d93301445ace9fce65","699a02e0e68a579f687d364bbbe7633161244f35af068220aee37b1b33dfb3c7"],"uploadUrl":"https://upload-firebasehosting.googleapis.com/upload/sites/react-hello-world-f5666/versions/2d30029b299d0626/files"}
+[debug] [2024-05-12T18:38:08.229Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/react-hello-world-f5666/versions/2d30029b299d0626/files/d891b42aa46defd24e11c05cb676e601e5810fbed9dab4d93301445ace9fce65 [none]
+[debug] [2024-05-12T18:38:08.230Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/react-hello-world-f5666/versions/2d30029b299d0626/files/d891b42aa46defd24e11c05cb676e601e5810fbed9dab4d93301445ace9fce65 [stream]
+[debug] [2024-05-12T18:38:08.235Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/react-hello-world-f5666/versions/2d30029b299d0626/files/699a02e0e68a579f687d364bbbe7633161244f35af068220aee37b1b33dfb3c7 [none]
+[debug] [2024-05-12T18:38:08.235Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/react-hello-world-f5666/versions/2d30029b299d0626/files/699a02e0e68a579f687d364bbbe7633161244f35af068220aee37b1b33dfb3c7 [stream]
+[debug] [2024-05-12T18:38:08.243Z] [hosting][populate queue][FINAL] {"max":1004,"min":1004,"avg":1004,"active":0,"complete":1,"success":1,"errored":0,"retried":0,"total":1,"elapsed":1018}
+[debug] [2024-05-12T18:38:08.244Z] [hosting] uploads queued: 2
+[debug] [2024-05-12T18:38:22.063Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/react-hello-world-f5666/versions/2d30029b299d0626/files/d891b42aa46defd24e11c05cb676e601e5810fbed9dab4d93301445ace9fce65 200
+[debug] [2024-05-12T18:38:22.064Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/react-hello-world-f5666/versions/2d30029b299d0626/files/d891b42aa46defd24e11c05cb676e601e5810fbed9dab4d93301445ace9fce65 [stream]
+[debug] [2024-05-12T18:38:22.069Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/react-hello-world-f5666/versions/2d30029b299d0626/files/699a02e0e68a579f687d364bbbe7633161244f35af068220aee37b1b33dfb3c7 200
+[debug] [2024-05-12T18:38:22.072Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/react-hello-world-f5666/versions/2d30029b299d0626/files/699a02e0e68a579f687d364bbbe7633161244f35af068220aee37b1b33dfb3c7 [stream]
+[debug] [2024-05-12T18:38:22.078Z] [hosting][upload queue][FINAL] {"max":13849,"min":13838,"avg":13843.5,"active":0,"complete":2,"success":2,"errored":0,"retried":0,"total":2,"elapsed":13851}
+[info] +  hosting[react-hello-world-f5666]: file upload complete 
+[debug] [2024-05-12T18:38:22.084Z] [hosting] deploy completed after 14935ms
+[debug] [2024-05-12T18:38:22.085Z] [
+  {
+    "config": {
+      "public": "public",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "rewrites": [
+        {
+          "source": "**",
+          "destination": "/index.html"
+        }
+      ],
+      "site": "react-hello-world-f5666"
+    },
+    "version": "projects/242177575243/sites/react-hello-world-f5666/versions/2d30029b299d0626"
+  }
+]
+[info] i  hosting[react-hello-world-f5666]: finalizing version... 
+[debug] [2024-05-12T18:38:22.097Z] >>> [apiv2][query] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/react-hello-world-f5666/versions/2d30029b299d0626 updateMask=status%2Cconfig
+[debug] [2024-05-12T18:38:22.097Z] >>> [apiv2][body] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/react-hello-world-f5666/versions/2d30029b299d0626 {"status":"FINALIZED","config":{"rewrites":[{"glob":"**","path":"/index.html"}]}}
+[debug] [2024-05-12T18:38:32.739Z] <<< [apiv2][status] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/react-hello-world-f5666/versions/2d30029b299d0626 200
+[debug] [2024-05-12T18:38:32.739Z] <<< [apiv2][body] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/react-hello-world-f5666/versions/2d30029b299d0626 {"name":"projects/242177575243/sites/react-hello-world-f5666/versions/2d30029b299d0626","status":"FINALIZED","config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2024-05-12T18:38:00.830906Z","createUser":{"email":"tanzeelkhandec21@gmail.com"},"finalizeTime":"2024-05-12T18:38:30.143821Z","finalizeUser":{"email":"tanzeelkhandec21@gmail.com"}}
+[debug] [2024-05-12T18:38:32.740Z] [hosting] finalized version for react-hello-world-f5666:[object Object]
+[info] +  hosting[react-hello-world-f5666]: version finalized 
+[info] i  hosting[react-hello-world-f5666]: releasing new version... 
+[debug] [2024-05-12T18:38:32.742Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/react-hello-world-f5666/channels/live/releases versionName=projects%2F242177575243%2Fsites%2Freact-hello-world-f5666%2Fversions%2F2d30029b299d0626
+[debug] [2024-05-12T18:38:32.743Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/react-hello-world-f5666/channels/live/releases {}
+[debug] [2024-05-12T18:38:33.792Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/react-hello-world-f5666/channels/live/releases 200
+[debug] [2024-05-12T18:38:33.793Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/react-hello-world-f5666/channels/live/releases {"name":"projects/242177575243/sites/react-hello-world-f5666/channels/live/releases/1715539110406000","version":{"name":"projects/242177575243/sites/react-hello-world-f5666/versions/2d30029b299d0626","status":"FINALIZED","config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2024-05-12T18:38:00.830906Z","createUser":{"email":"tanzeelkhandec21@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/ACg8ocIX2nzFGXEppyrIIcoMHkRCfgOI4kfkUY76qjdNBbejmXuRslc"},"finalizeTime":"2024-05-12T18:38:30.143821Z","finalizeUser":{"email":"tanzeelkhandec21@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/ACg8ocIX2nzFGXEppyrIIcoMHkRCfgOI4kfkUY76qjdNBbejmXuRslc"}},"type":"DEPLOY","releaseTime":"2024-05-12T18:38:30.406Z","releaseUser":{"email":"tanzeelkhandec21@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/ACg8ocIX2nzFGXEppyrIIcoMHkRCfgOI4kfkUY76qjdNBbejmXuRslc"}}
+[debug] [2024-05-12T18:38:33.793Z] [hosting] release: {"name":"projects/242177575243/sites/react-hello-world-f5666/channels/live/releases/1715539110406000","version":{"name":"projects/242177575243/sites/react-hello-world-f5666/versions/2d30029b299d0626","status":"FINALIZED","config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2024-05-12T18:38:00.830906Z","createUser":{"email":"tanzeelkhandec21@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/ACg8ocIX2nzFGXEppyrIIcoMHkRCfgOI4kfkUY76qjdNBbejmXuRslc"},"finalizeTime":"2024-05-12T18:38:30.143821Z","finalizeUser":{"email":"tanzeelkhandec21@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/ACg8ocIX2nzFGXEppyrIIcoMHkRCfgOI4kfkUY76qjdNBbejmXuRslc"}},"type":"DEPLOY","releaseTime":"2024-05-12T18:38:30.406Z","releaseUser":{"email":"tanzeelkhandec21@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/ACg8ocIX2nzFGXEppyrIIcoMHkRCfgOI4kfkUY76qjdNBbejmXuRslc"}}
+[info] +  hosting[react-hello-world-f5666]: release complete 
+[info] 
+[info] +  Deploy complete! 
+[info] 
+[info] Project Console: https://console.firebase.google.com/project/react-hello-world-f5666/overview
+[info] Hosting URL: https://react-hello-world-f5666.web.app
+[debug] [2024-05-12T18:38:59.778Z] Error: Timed out.
+    at Timeout._onTimeout (C:\Users\tanzeel khan\AppData\Roaming\npm\node_modules\firebase-tools\lib\utils.js:267:49)
+    at listOnTimeout (node:internal/timers:573:17)
+    at process.processTimers (node:internal/timers:514:7)
+[error] 
+[error] Error: An unexpected error has occurred.
